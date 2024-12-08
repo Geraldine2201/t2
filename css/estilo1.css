@@ -1,0 +1,433 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para la cabecera y navegación */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgb(0, 0, 0); /* Fondo semi-transparente */
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* Estilos para el botón hamburguesa (responsive) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+/* Estilos para la sección hero */
+.hero {
+    height: 70vh;
+    background: url('../image/rectangle1.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10px; /* Altura de la cabecera */
+    transition: color 0.5s ease;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Superposición oscura */
+}
+
+.hero-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #e67e22;
+}
+
+/* Estilos para el footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 80px;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+/* Sección: Nuestra Historia */
+.nuestra-historia {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Fondo claro */
+    text-align: center;
+}
+
+.nuestra-historia .contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nuestra-historia h5 {
+    font-size: 36px;
+    color: #333;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.nuestra-historia h5::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f39c12;
+    margin: 10px auto 0;
+}
+
+.nuestra-historia p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    font-family: 'Georgia', serif;
+}
+/* Sección: Nuestra Historia */
+.nuestra-historia {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Fondo claro */
+    text-align: center;
+}
+
+.nuestra-historia .contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nuestra-historia h2 {
+    font-size: 36px;
+    color: #333;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.nuestra-historia h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f39c12;
+    margin: 10px auto 0;
+    transition: color 0.5s ease;
+}
+
+.nuestra-historia p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    font-family: 'Georgia', serif;
+}
+
+/* Sección: Destacados */
+.seccion-destacados {
+    padding: 50px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+
+.contenedor-destacados {
+    display: flex;
+    gap: 15px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cuadro {
+    flex: 1;
+    text-align: center;
+}
+
+.cuadro.imagen img {
+    width: 100%;
+    height: auto;
+    border: 5px solid #f39c12; /* Borde amarillo */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cuadro.imagen img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+.cuadro.texto {
+    flex: 2;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 3px solid #f39c12; /* Borde amarillo */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cuadro.texto h2 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.cuadro.texto p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Sección: Recomendaciones */
+.seccion-recomendaciones {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: color 0.5s ease;
+}
+
+.seccion-recomendaciones h2 {
+    font-size: 32px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.contenedor-recomendaciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.contenido-izquierdo {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.cuadro-texto {
+    padding: 15px;
+    background-color: #fff;
+    border: 3px solid #f39c12; /* Borde amarillo */
+    border-radius: 10px;
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.ver-mas {
+    text-align: center;
+}
+
+.ver-mas a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.ver-mas a:hover {
+    background-color: #e67e22;
+}
+
+.contenido-derecho {
+    flex: 0.35; /* 35% del ancho */
+    text-align: right;
+}
+
+.contenido-derecho img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #f39c12;
+}
+html {scroll-behavior: smooth;
+}
+
+
+
+/* Contenedor principal */
+#menus-especiales {
+    padding: 50px 20px;
+    background-color: #000000; /* Fondo oscuro */
+    color: #fff;
+    text-align: center;
+}
+
+#menus-especiales h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #f39c12; /* Amarillo */
+}
+
+/* Estilos de la lista */
+.menu-lista {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Contenido de cada menú */
+.contenido-menu {
+    flex: 2;
+    text-align: left;
+}
+
+.plato {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.descripcion {
+    font-size: 10px;
+    color: #b3b3b3;
+}
+
+/* Líneas amarillas */
+.lineas-amarillas {
+    flex: 1;
+    text-align: center;
+    margin: 0 200px;
+}
+
+.linea {
+    border: none;
+    height: 3px;
+    background-color: #d19027;
+    margin: 2px 0; /* Separación entre las dos líneas */
+    width: 100%;
+}
+
+/* Precio */
+.precio {
+    flex: 0;
+    font-size: 18px;
+    text-align: right;
+    color: #fff;
+}
